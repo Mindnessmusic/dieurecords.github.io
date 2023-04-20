@@ -1,28 +1,618 @@
 <style>
-    body {
-    background: linear-gradient(to bottom, #000000, #242424);
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
-.dieu-header {
-    height: 64px;
-    width: 1800px;
+
+html{
+    scroll-behavior: smooth;
+}
+
+    video {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+body{
+    background: linear-gradient(to bottom, #000000, #000000);
+}
+
+#bgvid{
+    opacity: 29%;
+}
+
+
+
+.container {
+    padding: 25px 10%;
+}
+
+.logo {
+    width: 160px;
+}
+
+nav{
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 9px 50px;
+}
+nav ul li a{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+.social-icons img{
+    opacity: 50%;
+    width: 6%;
+    padding: 20px 10px;
+}
+.mail{
+    color: #d8d8d8;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 22px;
+
+}
+#contact{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background-color: #050505;
+    border-radius: 0;
+}
+.contact{
+    padding: 20px 0;
+    color: #fff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 42px;
+}
+
+
+
+
+
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.newcol-2 {
+    flex-basis: 55%;
+}
+
+.newcol-1 {
+    flex-basis: 35%;
+}
+
+.newcol-1 img {
+    width: 110%;
+    border-radius: 0%;
+    margin-top: 120px;
+    margin-bottom: 150px;
+}
+
+.sub-title {
+    padding: 100px 0;
+    color: #fff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 58px;
+}
+
+.new1-opis {
+    color: #c4c4c4;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 34px;
+    margin-bottom: 80px;
+}
+
+.newtitle{
+    padding: 5px 0;
+    color: #fff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 30px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+
+
+
+#artysci {
+    padding: 20px 150px;
+    margin-bottom: 100px;
+}
+
+.sub-title2 {
+    padding: 18px 0;
+    color: #fff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 30px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+
+}
+
+.work-list {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+grid-gap: 70px;
+margin-top: 50px;
+}
+
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.work img {
+    width: 100%;
+    border-radius: 0px;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.instagram-headrer {
+    color: #fff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 42px;
+}
+
+.instagram-opis {
+    color: #ffffff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.layer img{
+    width: 52px;
+    border-radius: 0;
+    margin-left: 0px;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+}
+
+.layer {
+    width: 100%;
+    height: 0%;
+    background: linear-gradient(rgba(0,0,0,0), rgba(0, 0, 0, 0.9));
+    border-radius: 0px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 0;
+    text-align: center;
+    transition: height 0.5s;
+}
+
+.layer h3 {
+    font-weight: 500;
+}
+
+.work:hover img{
+    transform: scale(1);
+}
+
+.work:hover .layer{
+    height: 39%;
+}
+
+.img-external{
+    margin-top: 10px;
+padding: 10px 10px;
+}
+
+
+.onastitle {
+    padding: 18px 0;
+    color: #fff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 30px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+
+}
+
+.onasopis{
+    padding: 30px 0;
+    color: #fff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 30px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+button{
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 50px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #ffffff;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+span{
+    opacity: 0%;
+    background-color: #ffffff;
+    height: 100%;
+    width: 100%;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+button:hover span{
+    opacity: 20%;
+
+}
+
+
+
+
+
+@media only screen and (max-width: 1000px){
+
+    nav ul li a{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #fff;
+    font-size: 36px;
+}
+
+nav ul li{
+    display: inline;
+    list-style: none;
+    margin: 0px 20px;
+}
+
+.container {
+    padding: 60px 20%;
+}
+
+
+.onasopis{
+    font-size: 13px;
+}
+.logo{
+    width: 50%;
+    margin-left: 25%;
+}
+
+
+
+
+
+.newcol-2 {
+    flex-basis: 20%;
+}
+
+.newcol-1 {
+    flex-basis: 80%;
+}
+
+.newcol-1 img {
+    width: 100%;
+    border-radius: 0%;
+    margin-top: 1px;
+    margin-bottom: 0px;
+}
+
+.sub-title {
+    padding: 10px 0;
+    color: #fff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 58px;
+}
+
+.new1-opis {
+    color: #c4c4c4;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 34px;
+}
+
+.newtitle{
+    padding: 18px 0;
+    color: #fff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 30px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+button{
+    font-size: 28px;
+    width: 400px;
+    height: 80px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 10px 10px;
+    border-radius: 60px;
+    font-weight: bold;
+    border: 2px solid #ffffff;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.work-list {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+grid-gap: 100px;
+margin-top: 50px;
+}
+
+#artysci {
+    padding: 10px 0;
+    margin-bottom: 30px;
+}
+
+.instagram-headrer {
+    color: #fff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 60px;
+}
+
+.instagram-opis {
+    color: #ffffff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 28px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+}
+
+
+.layer {
+    width: 100%;
+    height: 0%;
+    background: linear-gradient(rgba(0,0,0,0), rgba(0, 0, 0, 0.9));
+    border-radius: 0px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 0;
+    text-align: center;
+    transition: height 0.5s;
+}
+
+.work:hover .layer{
+    height: 80%;
+}
+
+.social-icons img{
+    opacity: 50%;
+    width: 16%;
+    padding: 20px 10px;
+}
+.mail{
+    color: #d8d8d8;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 40px;
+
+}
+#contact{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background-color: #050505;
+    border-radius: 0;
+}
+.contact{
+    padding: 20px 0;
+    color: #fff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 63px;
+}
+
+}
+
+
+
+
+
 </style>
 
 
+<html lang="pl">
+<head>
+    <title>
+        Dieu Records
+    </title>
+    <link rel="shortcut icon" type="image/jpg" href="images/favicon.png"/>
+</head>
+<body>
 
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>
-            Dieu
-        </title>
-    </head>
-    <body>
-    <logo1>
-        <img src="dieusvg-white.svg" class="dieu-header">
-    </logo1>
-    </body>
+    <video playsinline autoplay muted loop id="bgvid">
+        <source src="effect1.mp4" type="video/mp4">
+    </video>
+
+<div id="home">
+<div class="container">
+    <nav>
+        <img src="dieusvgwhite.png" class="logo">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#artysci">Artyści</a></li>
+            <li><a href="#onas">O nas</a></li>
+            <li><a href="#contact">Kontakt</a></li>
+        </ul>
+    </nav>
+</div>
+</div>
+
+<div id="nowosci">
+    <div class="container">
+        <h1 class="newtitle2"></h1>
+        <div class="row">
+            <div class="newcol-1"> 
+                <img src="images/HiMCD.png">
+            </div>
+            <div class="newcol-2"> 
+                <h1 class="sub-title">Hajs I Makaron</h1>
+                <p class="new1-opis">
+                    Hajs i Makaron - Pierwsza płyta w pełni stworzona i wypuszczona przez wytwórnię DIEU. 
+                    Napisana i nagrana na przestrzeni kilku miesięcy przez 2 osoby: Moynett & Mindness. 
+                    Oferuję ona wielką różnorodność zarówno stylu jak i gatunku. 
+                    kładka stworzona przez przypadek, gdy tylko zauważono jak dwoje artystów nie pracuje. 
+                    Wkrótce na Spotify i innych platformach streamingowych. 
+
+                </p>
+                <div>
+                    <button type="button"><span></span>Spotify</button>
+                    <button type="button"><span></span>Youtube</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div id="artysci">
+    <div class="container">
+        <h1 class="sub-title2">Artyści</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/moynett.png">
+                <div class="layer">
+                    <h3 class="instagram-headrer">Moynett</h3>
+                    <p class="instagram-opis">Debiutujący artysta, współtwórca projektu DIEU, który stawia sobie za cel 
+                        wprowadzenie świeżości w polskim rapie i hip-hopie. Od problemów społecznych po prostotę w przekazie i stylu. 
+                        Kreując nowe ścieżki i eksperymentując ze stylem jednocześnie pokaże to co dobrze każdy zna. </p>
+
+                    <a href="https://www.instagram.com/moynett/" target="_blank">
+                        <img src="images/instagramico.png" class="img-external">
+                    </a>
+
+                    <a href="https://www.instagram.com/moynett/" target="_blank">
+                        <img src="images/spotifyico.png" class="img-external">
+                    </a>
+                </div>
+            </div>
+            
+            <div class="work">
+                <img src="images/mindness.png">
+                <div class="layer">
+                    <h3 class="instagram-headrer">Mindness</h3>
+                    <p class="instagram-opis">Debiutujący producent jak i artysta, współtwórca projektu DIEU, 
+                        zaczynając od Dubstepu zachacza o każdy gatunek muzyczny i nie zatrzymuje się w dążeniu do celu jakim 
+                        jest sukces w muzyce. Cechuje go kreatywne i nieszablonowe podejście jak i świeżość młodego pokolenia.</p>
+
+                    <a href="https://www.instagram.com/mindnessmusic/" target="_blank">
+                        <img src="images/instagramico.png" class="img-external">
+
+                        <a href="https://www.instagram.com/mindnessmusic/" target="_blank">
+                            <img src="images/spotifyico.png" class="img-external">
+                        </a>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+<div id="onas">
+    <div class="container">
+        <h1 class="onastitle">O Nas</h1>
+        <p class="onasopis">Dieu to dynamiczna i innowacyjna wytwórnia muzyczna, 
+            założona przez utalentowanych artystów - Mindness i Moynett. 
+            Specjalizuje się w tworzeniu muzyki w gatunkach trap, hip-hop i pop, 
+            w oparciu o profesjonalne podejście do działalności oraz zespół doświadczonych specjalistów. 
+            Czerpiąc inspirację z najnowszych trendów w muzyce, Dieu stawia na unikalność i indywidualność swoich utworów, 
+            a każdy artysta może tu rozwijać swoje umiejętności i wyrażać swoją twórczą wizję.</p>
+    </div>
+
+</div>
+
+
+
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="contact">Skontaktuj się z nami</h1>
+                    <p class="mail">dieurecords@gmail.com</p>
+                    <p class="mail">@mindnessmusic</p>
+                    <p class="mail">@moynett</p>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/dieurecords/" target="_blank"><img src="images/instagramico.png"/></a>
+                        <a href="https://twitter.com/DieuRecords" target="_blank"><img src="images/twitterico.png"/></a>
+                    </div>
+                </div>
+                <div class="contact-right"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+    
+</body>
 </html>
